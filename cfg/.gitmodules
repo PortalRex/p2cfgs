@@ -1,0 +1,3 @@
+[submodule "mtriggers"]
+	path = mtriggers
+	url = https://github.com/p2sr/portal2-mtriggers
