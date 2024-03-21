@@ -1,0 +1,1801 @@
+"
+		}
+
+		"CoopLevelSelectFont_Bold"
+		{
+			"uppercase"		"1"
+			"punctuation"	"1"
+		}
+
+		"CoopLevelSelectFont_Small"
+		{
+			"commonchars"	"1"
+		}
+
+		"CoopHubTrackScreenFont"
+		{
+			"uppercase"		"1"
+			"punctuation"	"1"
+		}
+
+		"CoopHubScreenMediumFont"
+		{
+			"uppercase"		"1"
+			"punctuation"	"1"
+		}
+
+		"CoopHubScreenVerySmallFont"
+		{
+			"uppercase"		"1"
+			"punctuation"	"1"
+		}
+
+		"CoopHubTrackScreenFont_Bold"
+		{
+			"numbers"		"1"
+		}
+
+		"CoopHubScreenNumberFont"
+		{
+			"numbers"		"1"
+			"explicit"		"#P2COOP_Scoreboard_Stat4"
+		}
+
+		"CoopLevelProgressFont_Small"
+		{
+			"uppercase"		"1"
+			"numbers"		"1"
+			"punctuation"	"1"
+		}
+
+		"NeurotoxinCountdownFont"
+		{
+			"numbers"		"1"
+			"punctuation"	"1"
+		}
+
+		"InstructorTitle"
+		{
+			"commonchars"	"1"
+		}
+
+		"InstructorTitle_ss"
+		{
+			"commonchars"	"1"
+		}
+
+		"InstructorKeyBindings"
+		{
+			"commonchars"	"1"
+		}
+
+		"InstructorKeyBindingsSmall"
+		{
+			"commonchars"	"1"
+		}
+
+		"CloseCaption_Console"
+		{
+			"commonchars"	"1"
+			"asianchars"	"1"
+			"skipifasian"	"0"
+			"russianchars"	"1"
+			"uppercase"	"1"
+			"lowercase"	"1"
+		}
+
+		"CommentaryDefault"
+		{
+			"commonchars"	"1"
+			"asianchars"	"1"
+			"skipifasian"	"0"
+			"russianchars"	"1"
+			"uppercase"	"1"
+			"lowercase"	"1"
+		}
+
+		"CreditsOutroText"
+		{
+			"commonchars"	"1"
+			"skipifasian"	"0"
+		}
+
+		"ConfirmationText"
+		{
+			"commonchars"	"1"
+		}
+
+		"InGameChapterTitle"
+		{
+			"uppercase"		"1"
+			"numbers"		"1"
+			"russianchars"		"1"
+		}
+
+		"InGameChapterSubtitle"
+		{
+			"uppercase"		"1"
+			"russianchars"		"1"
+		}
+
+		"ButtonText"
+		{
+			"commonchars"	"1"
+		}
+
+		"MainMenuItem"
+		{
+			"commonchars"	"1"
+		}
+
+		"DialogMenuItem"
+		{
+			"commonchars"	"1"
+		}
+
+		"DialogTitle"
+		{
+			"commonchars"	"1"
+		}
+
+		"DialogButton"
+		{
+			"commonchars"	"1"
+		}
+
+		"ControllerLayout"
+		{
+			"commonchars"	"1"
+		}
+
+		"NewGameChapter"
+		{
+			"commonchars"	"1"
+		}
+
+		"NewGameChapterName"
+		{
+			"commonchars"	"1"
+		}
+
+		"FriendsList"
+		{
+			"uppercase"	"1"
+			"lowercase"	"1"
+			"numbers"	"1"
+			"explicit"	" _-"
+		}
+
+		"FriendsListSmall"
+		{
+			"uppercase"	"1"
+			"lowercase"	"1"
+			"explicit"	"2() "
+		}
+
+		"FriendsListStatusLine" [!$GAMECONSOLE]
+		{
+			"uppercase"	"1"
+			"lowercase"	"1"
+			"explicit"	"2() "
+		}
+	}
+
+	//////////////////////// BITMAP FONT FILES /////////////////////////////
+	//
+	// Bitmap Fonts are ****VERY*** expensive static memory resources so they are purposely sparse
+	BitmapFontFiles
+	{
+		// UI buttons, custom font, (256x64)
+		"Buttons"		"materials/vgui/fonts/buttons_32.vbf"      [!$PS3]
+		"Buttons"		"materials/vgui/fonts/buttons_ps3_32.vbf"  [$PS3 && !$INPUTSWAPAB]
+		"Buttons"		"materials/vgui/fonts/buttons_ps3_j_32.vbf"  [$PS3 && $INPUTSWAPAB]
+		"ButtonsSC"		"materials/vgui/fonts/buttons_sc_32.vbf"	[!$GAMECONSOLE]
+	}
+
+	//////////////////////// FONTS /////////////////////////////
+	//
+	// describes all the fonts
+	// font options: italic, underline, strikeout, antialias, dropshadow, outline, tall, blur, scanlines
+	//   ?: custom, bitmap, rotary, additive
+	//
+	// by default, the game will make a proportional AND a nonproportional version of each
+	// font. If you know ahead of time that the font will only ever be used proportionally
+	// or nonproportionally, you can conserve resources by telling the engine so with the
+	// "isproportional" key. can be one of: "no", "only", or "both".
+	// "both" is the default behavior.
+	// "only" means ONLY a proportional version will be made.
+	// "no" means NO proportional version will be made.
+	// this key should come after the named font glyph sets -- eg, it should be inside "Default" and
+	// after "1", "2", "3", etc -- *not* inside the "1","2",.. size specs. That is, it should be 
+	// at the same indent level as "1", not the same indent level as "yres".
+	
+	Fonts
+	{		
+		// Used for Debugging UI, overlays, etc - Not intended for customers
+		"DefaultSystemUI"
+		{
+			"isproportional"	"only"
+			"1"
+			{
+				"name"		"UniversLTStd-BoldCn"
+				"tall"		"18"
+				"weight"	"400"
+				"antialias"	"1"
+			}
+		}
+		
+		"NeurotoxinCountdownFont"
+		{
+			"isproportional"	"no"
+			"1"
+			{
+				"name"		"UniversLTStd-BoldCn"
+				"tall"		"80" [!$OSX]
+				"tall"		"94" [$OSX]
+				"weight"	"100" [!$X360]
+				"weight"	"400" [$X360]
+				"antialias" "1"
+			}
+		}
+
+//////////////////////// COOP /////////////////////////////
+
+		// Coop in-game vgui screen fonts
+		"CoopLevelSelectFont"
+		{
+			"isproportional"	"no"
+			"1"
+			{
+				"name"		"UniversLTStd-BoldCn"
+				"tall"		"38"
+				"weight"	"400"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"antialias" "1"
+			}
+		}
+		
+		"CoopLevelSelectFont_Bold"
+		{
+			"isproportional"	"no"
+			"1"
+			{
+				"name"		"UniversLTStd-BoldCn"
+				"tall"		"38"
+				"weight"	"400"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"antialias" "1"
+			}
+		}
+		
+		"CoopLevelSelectFont_Small"
+		{
+			"isproportional"	"no"
+			"1"
+			{
+				"name"		"UniversLTStd-BoldCn"
+				"tall"		"28"
+				"weight"	"400"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"antialias" "1"
+			}
+		}
+
+		"CoopLevelSelectFont_ExtraSmall"
+		{
+			"isproportional"	"no"			
+			"1"
+			{
+				"name"		"UniversLTStd-BoldCn"
+				"tall"		"22"
+				"weight"	"400"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"antialias" "1"
+			}
+		}
+		
+		"CoopHubTrackScreenFont_Bold"
+		{
+			"isproportional"	"no"	
+			"1"
+			{
+				"name"		"UniversLTStd-BoldCn"
+				"tall"		"98"	[!($PS3 && ($JAPANESE || $TCHINESE || $SCHINESE || $KOREAN))]
+				"tall"		"70"	[$PS3 && ($JAPANESE || $TCHINESE || $SCHINESE || $KOREAN)]
+				"weight"	"400"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"antialias" "1"
+			}
+		}
+
+		"CoopHubTrackScreenFont"
+		{
+			"isproportional"	"no"	
+			"1"
+			{
+				"name"		"UniversLTStd-BoldCn"
+				"tall"		"34"
+				"weight"	"400"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"antialias" "1"
+			}
+		}
+				
+		"CoopLevelProgressFont_Small"
+		{
+			"isproportional"	"no"	
+			"1"
+			{
+				"name"		"UniversLTStd-BoldCn"
+				"tall"		"28"
+				"weight"	"400"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				//"yres"	"1200 6000"
+				"antialias" "1"
+				//"dropshadow"	"1"
+			}
+		}
+		
+		"CoopHubScreenNumberFont"
+		{
+			"isproportional"	"no"	
+			"1"
+			{
+				"name"		"UniversLTStd-Cn"
+				"tall"		"106"	[!($PS3 && ($JAPANESE || $TCHINESE || $SCHINESE || $KOREAN))]
+				"tall"		"80"	[$PS3 && ($JAPANESE || $TCHINESE || $SCHINESE || $KOREAN)]
+				"weight"	"400"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"antialias" "1"
+			}
+		}
+
+		"CoopHubScreenMediumFont"
+		{
+			"isproportional"	"no"	
+			"1"
+			{
+				"name"		"UniversLTStd-Cn"
+				"tall"		"34"
+				"weight"	"400"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"antialias" "1"
+			}
+		}
+
+		"CoopHubScreenVerySmallFont"
+		{
+			"isproportional"	"no"	
+			"1"
+			{
+				"name"		"UniversLTStd-Cn"
+				"tall"		"12"
+				"weight"	"400"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"antialias" "1"
+			}
+		}
+
+		"CoopCreditsFont"
+		{
+			"isproportional"	"no"
+			"1"
+			{
+				"name"		"Consolas" [!$OSX]
+				"name"		"Helvetica" [$OSX]
+				"tall"		"39"
+				"weight"	"100"
+				//"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"antialias" "1"
+			}
+		}
+
+		"CoopCreditsFont_ExtraSmall"
+		{
+			"isproportional"	"no"
+			"1"
+			{
+				"name"		"Consolas"
+				"tall"		"23"
+				"weight"	"20"
+				//"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"antialias" "1"
+			}
+		}
+		
+//////////////////////// MENU UI /////////////////////////////
+
+		// this is the symbol font
+		"MarlettLarge" [!$GAMECONSOLE]
+		{
+			"1"
+			{
+				"name"		"Marlett"
+				"tall"		"16"
+				"weight"	"0"
+				"symbol"	"1"
+				"range"		"0x0000 0x007F"	//	Basic Latin
+				"antialias"	"1"
+			}
+		}
+
+		// this is the symbol font
+		"Marlett" [!$GAMECONSOLE]
+		{
+			"1"
+			{
+				"name"		"Marlett"
+				"tall"		"12"
+				"weight"	"0"
+				"symbol"	"1"
+				"range"		"0x0000 0x007F"	//	Basic Latin
+				"antialias"	"1"
+			}
+		}
+		
+		"MarlettHalf" [!$GAMECONSOLE]
+		{
+			"1"
+			{
+				"name"		"Marlett"
+				"tall"		"9"
+				"weight"	"0"
+				"symbol"	"1"
+				"range"		"0x0000 0x007F"	//	Basic Latin
+				"antialias"	"1"
+			}
+		}
+
+		GameUIButtons
+		{
+			"1"
+			{
+				"bitmap"	"1"
+				"name"		"Buttons"
+				"scalex"	"0.8"
+				"scaley"	"0.8"
+			}
+		}
+
+		GameUIButtonsMini
+		{
+			"1"
+			{
+				"bitmap"	"1"
+				"name"		"Buttons"
+				"scalex"	"0.65"
+				"scaley"	"0.65"
+			}
+		}
+
+		GameUIButtonsPs3ctrlr
+		{
+			"1"
+			{
+				"bitmap"	"1"
+				"name"		"Buttons"
+				"scalex"	"1"
+				"scaley"	"1"
+			}
+		}
+		
+		GameUIButtonsSteamController
+		{
+			"1"
+			{
+				"bitmap"	"1"
+				"name"		"ButtonsSC"
+				"scalex"	"0.6"
+				"scaley"	"0.6"
+			}
+		}		
+
+		GameUIButtonsSteamControllerMini
+		{
+			"1"
+			{
+				"bitmap"	"1"
+				"name"		"ButtonsSC"
+				"scalex"	"0.33"
+				"scaley"	"0.33"
+			}
+		}		
+
+		GameUIButtonsTiny
+		{
+			"1"
+			{
+				"bitmap"	"1"
+				"name"		"Buttons"
+				"scalex"	"0.5"
+				"scaley"	"0.5"
+			}
+		}
+							
+		// attract screen
+		"AttractTitle"
+		{
+			"isproportional"	"only"
+			"1"
+			{
+				"name"			"UniversLTStd-BoldCn"
+				"tall"			"34"
+				"weight"		"400"
+				"antialias"		"1"
+			}
+		}
+		
+		// an item appearing on the main menu
+		"MainMenuItem"
+		{
+			"isproportional"	"only"		
+			"1"
+			{
+				"name"		"UniversLTStd-Cn"
+				"tall"		"22"	[!$OSX]
+				"tall"		"26"	[$OSX]
+				"weight"	"400"
+				"antialias"	"1"
+			}
+		}
+	
+		// an item appearing on a dialog menu
+		"DialogMenuItem"
+		{
+			"isproportional"	"only"		
+			"1"
+			{
+				"name"		"UniversLTStd-Cn"
+				"tall"		"18"	[!$OSX]
+				"tall"		"21"	[$OSX]
+				"weight"	"700"
+				"antialias"	"1"
+			}
+		}
+		
+		// the title heading for a primary menu
+		"DialogTitle"
+		{
+			"isproportional"	"only"		
+			"1"
+			{
+				"name"		"UniversLTStd-BoldCn"
+				"tall"		"33"	[!$OSX]
+				"tall"		"37"	[$OSX]
+				"weight"	"400"
+				"antialias"	"1"
+			}
+		}
+		
+		// an LHS/RHS item appearing on a dialog menu
+		"DialogButton"
+		{
+			"isproportional"	"only"		
+			"1" [$GAMECONSOLE]
+			{
+				// SD requires a bolder font
+				"name"		"UniversLTStd-Cn"		[$GAMECONSOLELODEF]
+				// HD can support the lighter/thinner font
+				"name"		"UniversLTStd-LightCn"	[$GAMECONSOLEHIDEF]
+				"weight"	"700"
+				"tall"		"18"
+				"antialias"	"1"
+			}
+			"1" [!$GAMECONSOLE]
+			{
+				// HD or PC can support the lighter/thinner font
+				"name"		"UniversLTStd-Cn"		[$WIN32LODEF]
+				"tall"		"20"					[$WIN32LODEF && !$OSX]
+				"tall"		"21"					[$WIN32LODEF && $OSX]
+				"weight"	"400"					[$WIN32LODEF]
+				"name"		"UniversLTStd-LightCn"	[$WIN32HIDEF]
+				"tall"		"18"					[$WIN32HIDEF && !$OSX]
+				"tall"		"21"					[$WIN32HIDEF && $OSX]
+				"weight"	"700"					[$WIN32HIDEF]
+				"antialias"	"1"
+			}
+		}
+
+		"VideoSettingsDescriptionTitle"
+		{
+			"isproportional"	"only"		
+			"1"
+			{
+				"name"		"UniversLTStd-BoldCn"
+				"tall"		"24" [$WIN32WIDE]
+				"tall"		"20" [!$WIN32WIDE]
+				"weight"	"400"
+				"antialias"	"1"
+			}
+		}
+
+		"VideoSettingsDescription"
+		{
+			"isproportional"	"only"		
+			"1"
+			{
+				"name"		"UniversLTStd-Cn"		[$WIN32LODEF]
+				"tall"		"14"					[$WIN32LODEF]
+				"weight"	"400"					[$WIN32LODEF]
+				"name"		"UniversLTStd-LightCn"	[$WIN32HIDEF]
+				"tall"		"17"					[$WIN32HIDEF]
+				"weight"	"700"					[$WIN32HIDEF]
+				"antialias"	"1"
+			}
+		}
+		
+		// text for the footer buttons (A/B/X/Y)
+		"ButtonText" [$GAMECONSOLE]
+		{
+			"isproportional"	"only"		
+			"1"
+			{
+				"name"		"UniversLTStd-Cn"
+				"tall"		"18"
+				"weight"	"400"
+				"antialias"	"1"
+			}
+		}
+	
+		"ButtonText_NC" [!$GAMECONSOLE]
+		{
+			"isproportional"	"only"		
+			"1"
+			{
+				"name"		"UniversLTStd-BoldCn"
+				"tall"		"18"		[$WIN32LODEF]
+				"tall"		"15"		[$WIN32HIDEF]
+				"weight"	"400"
+				"antialias"	"1"
+			}
+		}
+
+		"KeyBindingsHeader" [!$GAMECONSOLE]
+		{
+			"isproportional"	"only"		
+			"1"
+			{
+				"name"		"UniversLTStd-BoldCn"
+				"tall"		"20"	[!$OSX]
+				"tall"		"22"	[$OSX]
+				"weight"	"400"
+				"antialias"	"1"
+			}
+		}
+
+		// text for the controller callouts
+		"ControllerLayout"
+		{
+			"isproportional"	"only"		
+			"1"
+			{
+				"name"		"UniversLTStd-BoldCn"	[!$OSX]
+				"name"		"UniversLTStd-Cn"		[$OSX]
+				"tall"		"15"	[$GAMECONSOLE]
+				"tall"		"18"	[!$GAMECONSOLE && $WIN32LODEF && !$OSX]
+				"tall"		"15"	[!$GAMECONSOLE && $WIN32HIDEF && !$OSX]
+				"tall"		"18"	[$OSX]
+				"weight"	"400"
+				"antialias"	"1"
+			}
+		}
+		
+		// text for the confirmation
+		"ConfirmationText"
+		{
+			"isproportional"	"only"		
+			"1"
+			{
+				"name"		"UniversLTStd-Cn"
+				"tall"		"20"	[!$OSX]
+				"tall"		"24"	[$OSX]
+				"weight"	"700"	[$GAMECONSOLE]
+				"weight"	"400"	[!$GAMECONSOLE]
+				"antialias"	"1"
+			}
+		}
+		
+		"FriendsList"
+		{
+			"isproportional"	"only"		
+			"1"
+			{
+				"name"		"UniversLTStd-Cn"
+				"tall"		"24" [$GAMECONSOLE]
+				"tall"		"20" [!$GAMECONSOLE && !$OSX]
+				"tall"		"24" [!$GAMECONSOLE && $OSX]
+				"weight"	"700"
+				"antialias"	"1"
+			}
+		}	
+	
+		"FriendsListSmall"
+		{
+			"isproportional"	"only"		
+			"1" [$OSX]
+			{
+				"name"		"UniversLTStd-Cn"
+				"tall"		"18"
+				"weight"	"400"
+				"antialias"	"1"
+				"yres"	"1 500"
+			}
+			"2"
+			{
+				"name"		"UniversLTStd-BoldCn"
+				"tall"		"18"
+				"weight"	"400"
+				"antialias"	"1"
+				"yres"	"501 6000" [$OSX]
+			}
+		}	
+		
+		"FriendsListStatusLine" [!$GAMECONSOLE]
+		{
+			"isproportional"	"only"		
+			"1"
+			{
+				"name"		"UniversLTStd-Cn"
+				"tall"		"14"
+				"weight"	"400"
+				"antialias"	"1"
+			}
+		}	
+		
+		"NewGameChapter"
+		{
+			"isproportional"	"only"		
+			"1"
+			{
+				"name"		"UniversLTStd-Cn"
+				"tall"		"18"	[!$OSX]
+				"tall"		"20"	[$OSX]
+				"weight"	"400"
+				"antialias"	"1"
+			}
+		}				
+		
+		"NewGameChapterName"
+		{
+			"isproportional"	"only"		
+			"1"
+			{
+				"name"		"UniversLTStd-BoldCn"
+				"tall"		"18"	[!$OSX]
+				"tall"		"20"	[$OSX]
+				"weight"	"400"
+				"antialias"	"1"
+			}
+		}						
+		
+		"GamerTag"
+		{
+			"isproportional"	"only"		
+			"1" [$OSX]
+			{
+				"name"		"UniversLTStd-Cn"
+				"tall"		"18"
+				"weight"	"400"
+				"antialias"	"1"
+				"yres"	"1 500"
+			}
+			"2" 
+			{
+				"name"		"UniversLTStd-BoldCn"
+				"tall"		"18"
+				"weight"	"400"
+				"antialias"	"1"
+				"yres"	"501 6000" [$OSX]
+			}
+		}				
+
+		"GamerTagStatus"
+		{
+			"isproportional"	"only"		
+			"1" [$OSX]
+			{
+				"name"		"UniversLTStd-Cn"
+				"tall"		"16"
+				"weight"	"400"
+				"antialias"	"1"
+				"yres"	"1 500"
+			}
+			"2" 
+			{
+				"name"		"UniversLTStd-BoldCn"
+				"tall"		"16"
+				"weight"	"400"
+				"antialias"	"1"
+				"yres"	"501 6000" [$OSX]
+			}
+		}				
+
+//////////////////////// CLOSE CAPTION /////////////////////////////
+
+		"CloseCaption_Normal" [!$GAMECONSOLE]
+		{
+			"1"
+			{
+				"name"		"UniversLTStd-Cn"
+				"tall"		"20"
+				"weight"	"500"
+				"antialias"	"1"
+			}
+		}
+		
+		"CloseCaption_Italic"	[!$GAMECONSOLE]
+		{	
+			"1"
+			{
+				"name"		"UniversLTStd-Cn"
+				"tall"		"20"
+				"weight"	"500"
+				"italic"	"1"
+				"antialias"	"1"
+			}
+		}
+		
+		"CloseCaption_Bold" [!$GAMECONSOLE]
+		{		
+			"1"
+			{
+				"name"		"UniversLTStd-Cn"
+				"tall"		"20"
+				"weight"	"900"
+				"antialias"	"1"
+			}
+		}
+		
+		"CloseCaption_BoldItalic" [!$GAMECONSOLE]
+		{
+			"1"
+			{
+				"name"		"UniversLTStd-Cn"
+				"tall"		"20"
+				"weight"	"900"
+				"italic"	"1"
+				"antialias"	"1"
+			}
+		}
+
+		"CloseCaption_Console" [$GAMECONSOLE]
+		{
+			"isproportional"	"only"
+			"1"
+			{
+				"name"		"UniversLTStd-BoldCn"
+				"tall"		"20"
+				"weight"	"400"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"antialias"	"1"
+			}
+		}
+
+//////////////////////// CHAPTER TITLES /////////////////////////////
+
+		"InGameChapterTitle"
+		{
+			"isproportional"	"only"		
+			"1"
+			{
+				"name"			"UniversLTStd-Cn"
+				"tall"			"19"
+				"weight"		"200"
+				"antialias"		"1"
+			}
+		}
+
+		"InGameChapterSubtitle"
+		{
+			"isproportional"	"only"
+			"1"
+			{
+				"name"			"UniversLTStd-BoldCn"
+				"tall"			"34"
+				"weight"		"800"
+				"antialias"		"1"
+			}
+		}
+
+//////////////////////// INSTRUCTOR /////////////////////////////
+
+		"InstructorTitle"
+		{
+			"isproportional"	"only"		
+			"1"
+			{
+				"name"			"UniversLTStd-BoldCn" [!$OSX]
+				"name"			"UniversLTStd-Cn" [$OSX]
+				"tall"			"18"
+				"weight"		"400"
+				"antialias"		"1"
+			}
+		}
+
+		"InstructorTitle_ss"
+		{
+			"isproportional"	"only"
+			"1"
+			{
+				"name"			"UniversLTStd-BoldCn" [!$OSX]
+				"name"			"UniversLTStd-Cn" [$OSX]
+				"tall"			"14"
+				"weight"		"400"
+				"antialias"		"1"
+			}
+		}
+		
+		"InstructorButtons"
+		{
+			"1"
+			{
+				"bitmap"	"1"
+				"name"		"Buttons"
+				"scalex"	"0.8"
+				"scaley"	"0.8"
+			}
+		}
+		
+		"InstructorButtons_ss"
+		{
+			"1"
+			{
+				"bitmap"	"1"
+				"name"		"Buttons"
+				"scalex"	"0.8" [$GAMECONSOLELODEF]
+				"scaley"	"0.8" [$GAMECONSOLELODEF]
+				"scalex"	"0.5" [$GAMECONSOLEHIDEF]
+				"scaley"	"0.5" [$GAMECONSOLEHIDEF]
+			}
+		}
+
+		"InstructorButtonsSteamController"
+		{
+			"1"
+			{
+				"bitmap"	"1"
+				"name"		"ButtonsSC"
+				"scalex"	"0.5"
+				"scaley"	"0.5"
+			}
+		}
+		
+		"InstructorButtonsSteamController_ss"
+		{
+			"1"
+			{
+				"bitmap"	"1"
+				"name"		"ButtonsSC"
+				"scalex"	"0.5" [$GAMECONSOLELODEF]
+				"scaley"	"0.5" [$GAMECONSOLELODEF]
+				"scalex"	"0.33" [$GAMECONSOLEHIDEF]
+				"scaley"	"0.33" [$GAMECONSOLEHIDEF]
+			}
+		}
+		
+		"InstructorKeyBindings"
+		{
+			"isproportional"	"only"
+			"1" [$OSX]
+			{
+				"name"		"UniversLTStd-Cn" [$OSX]
+				"tall"		"14"
+				"weight"	"400"
+				"antialias" "0"
+				"yres"	"1 500"
+			}
+			"2"
+			{
+				"name"		"UniversLTStd-BoldCn" [!$OSX]
+				"name"		"UniversLTStd-Cn" [$OSX]
+				"tall"		"12"
+				"weight"	"400"
+				"antialias" "1"
+				"yres"	"501 6000" [$OSX]
+			}
+		}
+
+		"InstructorKeyBindingsSmall"
+		{
+			"isproportional"	"only"
+			"1"
+			{
+				"name"		"UniversLTStd-BoldCn" [!$OSX]
+				"name"		"UniversLTStd-Cn" [$OSX]
+				"tall"		"9"		[!$GAMECONSOLE]
+				"tall"		"12"	[$GAMECONSOLE]
+				"weight"	"400"
+				"antialias" "1"
+			}
+		}
+
+//////////////////////// COMMENTARY /////////////////////////////
+	
+		"CommentaryDefault"
+		{
+			"isproportional"	"only"
+			"1" [$OSX]
+			{
+				"name"		"UniversLTStd-Cn"
+				"tall"		"16"
+				"weight"	"400"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"antialias" "1"
+				"yres"	"1 500"
+			}
+			"2"
+			{
+				"name"		"UniversLTStd-BoldCn"
+				"tall"		"16"
+				"weight"	"400"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"antialias" "1"
+				"yres"	"501 6000" [$OSX]
+			}
+		}	
+		
+//////////////////////// CREDITS /////////////////////////////
+
+		CreditsOutroText
+		{
+			"isproportional"	"only"
+			"1"
+			{
+				"name"		"Consolas"
+				"tall"		"20"
+				"weight"	"400"
+				"antialias" "1"
+			}
+		}
+
+//////////////////////// CENTER PRINT /////////////////////////////
+
+		CenterPrintText
+		{
+			// note that this scales with the screen resolution
+			"1"
+			{
+				"name"		"UniversLTStd-BoldCn" [!$OSX]
+				"name"		"UniversLTStd-Cn" [$OSX]
+				"tall"		"24"
+				"weight"	"400"
+				"antialias" "1"
+				"additive"	"1"
+			}
+		}
+
+		"AchievementNotification"
+		{
+			"1"
+			{
+				"name"		"UniversLTStd-BoldCn"
+				"tall"		"18"
+				"weight"	"400"
+				"antialias" "1"
+			}
+		}
+
+//////////////////////// PUZZLEMAKER /////////////////////////////
+
+		"PuzzleMakerUISmall"
+		{
+			"1"
+			{
+				"name"		"Arial"
+				"tall"		"16"
+				"weight"	"400"
+				"antialias" "1"
+			}
+		}
+
+		"PuzzleMakerUISmallItalic"
+		{
+			"1"
+			{
+				"name"		"Arial"
+				"tall"		"16"
+				"weight"	"400"
+				"italic"	"1"
+				"antialias" "1"
+			}
+		}
+
+		"PuzzleMakerUIMedium"
+		{
+			"1"
+			{
+				"name"		"Arial"
+				"tall"		"20"
+				"weight"	"400"
+				"antialias" "1"
+			}
+		}
+
+		"PuzzleMakerUIMenuBold"
+		{
+			"1"
+			{
+				"name"		"Arial"
+				"tall"		"24"
+				"weight"	"800"
+				"antialias" "1"
+			}
+		}
+					
+	}
+
+	//
+	//////////////////// BORDERS //////////////////////////////
+	//
+	// describes all the border types
+	Borders
+	{
+		BaseBorder
+		{
+			"inset" "0 0 1 1"
+			Left
+			{
+				"1"
+				{
+					"color" "BorderDark"
+					"offset" "0 1"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "BorderBright"
+					"offset" "1 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "BorderDark"
+					"offset" "0 0"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "BorderBright"
+					"offset" "0 0"
+				}
+			}
+		}
+		
+		TitleButtonBorder
+		{
+			"inset" "0 0 1 1"
+			Left
+			{
+				"1"
+				{
+					"color" "BorderBright"
+					"offset" "0 1"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "BorderDark"
+					"offset" "1 0"
+				}
+			}
+
+			Top
+			{
+				"4"
+				{
+					"color" "BorderBright"
+					"offset" "0 0"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "BorderDark"
+					"offset" "0 0"
+				}
+			}
+		}
+
+		TitleButtonDisabledBorder
+		{
+			"inset" "0 0 1 1"
+			Left
+			{
+				"1"
+				{
+					"color" "BgColor"
+					"offset" "0 1"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "BgColor"
+					"offset" "1 0"
+				}
+			}
+			Top
+			{
+				"1"
+				{
+					"color" "BgColor"
+					"offset" "0 0"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "BgColor"
+					"offset" "0 0"
+				}
+			}
+		}
+
+		TitleButtonDepressedBorder
+		{
+			"inset" "1 1 1 1"
+			Left
+			{
+				"1"
+				{
+					"color" "BorderDark"
+					"offset" "0 1"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "BorderBright"
+					"offset" "1 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "BorderDark"
+					"offset" "0 0"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "BorderBright"
+					"offset" "0 0"
+				}
+			}
+		}
+
+		ScrollBarButtonBorder	[0]
+		{
+			"inset" "2 2 0 0"
+			Left
+			{
+				"1"
+				{
+					"color" "BorderBright"
+					"offset" "0 1"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "BorderDark"
+					"offset" "1 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "BorderBright"
+					"offset" "0 0"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "BorderDark"
+					"offset" "0 0"
+				}
+			}
+		}
+
+		ButtonBorder	[0]
+		{
+			"inset" "0 0 1 1"
+			Left
+			{
+				"1"
+				{
+					"color" "BorderBright"
+					"offset" "0 1"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "BorderDark"
+					"offset" "0 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "BorderBright"
+					"offset" "0 1"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "BorderDark"
+					"offset" "0 0"
+				}
+			}
+		}
+
+		TabBorder
+		{
+			"inset" "0 0 1 1"
+			Left
+			{
+				"1"
+				{
+					"color" "BorderBright"
+					"offset" "0 1"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "BorderDark"
+					"offset" "1 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "BorderBright"
+					"offset" "0 0"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "BorderBright"
+					"offset" "0 0"
+				}
+			}
+		}
+
+		TabActiveBorder
+		{
+			"inset" "0 0 1 0"
+			Left
+			{
+				"1"
+				{
+					"color" "BorderBright"
+					"offset" "0 0"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "BorderDark"
+					"offset" "1 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "BorderBright"
+					"offset" "0 0"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "ControlBG"
+					"offset" "6 2"
+				}
+			}
+		}
+
+
+		ToolTipBorder
+		{
+			"inset" "0 0 1 0"
+			Left
+			{
+				"1"
+				{
+					"color" "BorderDark"
+					"offset" "0 0"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "BorderDark"
+					"offset" "1 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "BorderDark"
+					"offset" "0 0"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "BorderDark"
+					"offset" "0 0"
+				}
+			}
+		}
+
+		// this is the border used for default buttons (the button that gets pressed when you hit enter)
+		ButtonKeyFocusBorder
+		{
+			"inset" "0 0 1 1"
+			Left
+			{
+				"1"
+				{
+					"color" "BorderSelection"
+					"offset" "0 0"
+				}
+				"2"
+				{
+					"color" "BorderBright"
+					"offset" "0 1"
+				}
+			}
+			Top
+			{
+				"1"
+				{
+					"color" "BorderSelection"
+					"offset" "0 0"
+				}
+				"2"
+				{
+					"color" "BorderBright"
+					"offset" "1 0"
+				}
+			}
+			Right
+			{
+				"1"
+				{
+					"color" "BorderSelection"
+					"offset" "0 0"
+				}
+				"2"
+				{
+					"color" "BorderDark"
+					"offset" "1 0"
+				}
+			}
+			Bottom
+			{
+				"1"
+				{
+					"color" "BorderSelection"
+					"offset" "0 0"
+				}
+				"2"
+				{
+					"color" "BorderDark"
+					"offset" "0 0"
+				}
+			}
+		}
+
+		ButtonDepressedBorder
+		{
+			"inset" "2 1 1 1"
+			Left
+			{
+				"1"
+				{
+					"color" "BorderDark"
+					"offset" "0 1"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "BorderBright"
+					"offset" "1 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "BorderDark"
+					"offset" "0 0"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "BorderBright"
+					"offset" "0 0"
+				}
+			}
+		}
+
+		ComboBoxBorder
+		{
+			"inset" "0 0 1 1"
+			Left
+			{
+				"1"
+				{
+					"color" "BorderDark"
+					"offset" "0 1"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "BorderBright"
+					"offset" "1 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "BorderDark"
+					"offset" "0 0"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "BorderBright"
+					"offset" "0 0"
+				}
+			}
+		}
+
+		MenuBorder
+		{
+			"inset" "1 1 1 1"
+			Left
+			{
+				"1"
+				{
+					"color" "BorderBright"
+					"offset" "0 1"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "BorderDark"
+					"offset" "1 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "BorderBright"
+					"offset" "0 0"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "BorderDark"
+					"offset" "0 0"
+				}
+			}
+		}
+		ASWBriefingButtonBorder
+		{
+			"inset" "1 1 1 1"
+			Left
+			{
+				"1"
+				{
+					"color" "LightBlue"
+					"offset" "0 0"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "LightBlue"
+					"offset" "0 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "LightBlue"
+					"offset" "0 0"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "LightBlue"
+					"offset" "0 0"
+				}
+			}
+		}
+		ASWBriefingButtonBorderDisabled
+		{
+			"inset" "1 1 1 1"
+			Left
+			{
+				"1"
+				{
+					"color" "GreyBlue"
+					"offset" "0 0"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "GreyBlue"
+					"offset" "0 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "GreyBlue"
+					"offset" "0 0"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "GreyBlue"
+					"offset" "0 0"
+				}
+			}
+		}
+		ASWMapLabelBorder
+		{
+			"inset" "1 1 1 1"
+			Left
+			{
+				"1"
+				{
+					"color" "White"
+					"offset" "0 0"
+				}
+			}
+
+			Right
+			{
+				"1"
+				{
+					"color" "White"
+					"offset" "0 0"
+				}
+			}
+
+			Top
+			{
+				"1"
+				{
+					"color" "White"
+					"offset" "0 0"
+				}
+			}
+
+			Bottom
+			{
+				"1"
+				{
+					"color" "White"
+					"offset" "0 0"
+				}
+			}
+		}
+	}
+
+    CustomFontFiles
+    {
+		"1"		"vgui/fonts/univercb.vfont"		[!$TURKISH]
+		"2"		"vgui/fonts/univercl.vfont"		[!$TURKISH]
+		"3"		"vgui/fonts/universc.vfont"		[!$TURKISH]
+		"1"		"vgui/fonts/univercb_t.vfont"	[$TURKISH]
+		"2"		"vgui/fonts/univercl_t.vfont"	[$TURKISH]
+		"3"		"vgui/fonts/universc_t.vfont"	[$TURKISH]
+		"4"		"vgui/fonts/consola.vfont"
+		"5"		"vgui/fonts/unltcyr5.vfont"	
+		"6"		"vgui/fonts/unltcyr6.vfont"	
+    }
+}
